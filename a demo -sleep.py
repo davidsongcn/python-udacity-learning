@@ -7,15 +7,14 @@ import time
 print("this program starter on" + time.ctime())
 # 学会使用while
 # 具体用法：定义循环的 初始变量和最终变量
-#while 初始变量 < 最终变量 ：
+# while 初始变量 < 最终变量 ：
 #        执行语句
-#初始变量 = 初始变量 + 1
+# 初始变量 = 初始变量 + 1
 total_break = 3
 break_count = 0
 
 while break_count < total_break:
-    # 修改从3秒变为两小时 可以直接在参数里面加减乘除
-    # time.sleep(3)
-    time.sleep(3 * 60 * 60 * 2)
+    # 修改从3秒变为两小时 可以直接在参数里面加减乘除3*60*60*2，再改回去
+    time.sleep(3)
     webbrowser.open("www.youtube.com")
     break_count = break_count + 1
