@@ -9,7 +9,8 @@ def draw_square(brad_turtle):
 def draw_picture():
     window = turtle.Screen()
     window.bgcolor("orange")
-
+    # 实例化一个类
+    # 类有很多方法，直接实例.方法.(参数)
     brad = turtle.Turtle()
     brad.color("blue")
     brad.shape("circle")

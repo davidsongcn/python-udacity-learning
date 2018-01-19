@@ -5,7 +5,7 @@ def draw_square(brad_turtle):
     for i in range(1,5):
         brad_turtle.forward(100)
         brad_turtle.right(90)
-
+        brad_turtle.speed(9)
 def draw_picture():
     window = turtle.Screen()
     window.bgcolor("orange")
@@ -14,18 +14,25 @@ def draw_picture():
     brad = turtle.Turtle()
     brad.color("blue")
     brad.shape("circle")
-    brad.speed(3)
+    brad.speed(7)
 
     # 改进循环
 
-    # 旋转循环
-    count_final = 24
-    count_count = 0
-    while count_count < count_final:
-
+    for i in range(1,31):
+        # 如果定义的时候就有参数，函数一定要带参数，参数就是变量，就是类的实例，这个参数下面有很多方法
         draw_square(brad)
-        count_count = count_count + 1
-        brad.right(20)
+        brad.right(30)
+
+    # 旋转循环
+    # count_final = 24
+    # count_count = 0
+    # p = 0 #让每次加速
+    # while count_count < count_final:
+    #
+    #     draw_square(brad)
+    #     count_count = count_count + 1
+    #     p = p + 19 #让每次加速
+    #     brad.right(20 + p)
 
 
 
