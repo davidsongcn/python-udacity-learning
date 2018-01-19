@@ -5,6 +5,7 @@ import http.client
 import hashlib
 import urllib
 import random
+import json
 import sys
 
 def read_text():
@@ -25,7 +26,7 @@ secretKey = 'OyTpxnhmhEEgvXctb2KBBcIHrF9EVa2B'
 
 httpClient = None
 myurl = '/api'
-q = 'I love you'
+q = 'I am best'
 fromLang = 'EN'
 toLang = 'zh-CHS'
 salt = random.randint(1, 65536)
@@ -50,7 +51,12 @@ try:
     response_output = response.read()
     # 我认为增加了encode和decode环节
     response_output_decode = response_output.decode("utf-8")
-    print (response_output_decode)
+    # 增加json解析环节和python字典解析环节
+    data2 = json.loads(response_output_decode)
+    data3 = data2['translation']
+    print(q+'的意思是'+ ':' + data3[0])
+    # print(data2['translation'])
+    # print (response_output_decode)
 # except Exception, e:
 #     print
 #     e
