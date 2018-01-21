@@ -52,3 +52,18 @@ utf8 一些api在给服务器传数据时，会要求生成利用appid 生成MD5
 接受的时候再decode（“utf8”）
 
 ----------------------------------------------------------
+
+
+实例变量
+实例方法
+类变量
+---
+从一开始就预先存在的类变量
+__doc__ 类下面的注释
+aaa.bbb.__doc__
+
+__name__
+The __name__ attribute must be set to the fully-qualified name of the module. This name is used to uniquely identify the module in the import system.
+---
+集成 inherit
+子类可以从父类集成一些类变量 然后自己再加一些其他变量
